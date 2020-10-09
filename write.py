@@ -1,0 +1,21 @@
+def write_in(i,question,answer):                #将题目和答案分别写入文件
+    if ( int(i)==1 ):
+        f = open('questions.txt','a')
+        f.seek(0)
+        f.truncate()
+        f.close()
+        f = open('answers.txt','a')
+        f.seek(0)
+        f.truncate()
+        f.close()
+    f1 = open('questions.txt','a')
+    f1.write("第"+str(i)+"题:")
+    f1.write(question)
+    f1.write('\n')
+    f1.close()
+
+    f2 = open('answers.txt','a')
+    f2.write("第"+str(i)+"题答案:")
+    f2.write(answer)
+    f2.write('\n')
+    f2.close() 
